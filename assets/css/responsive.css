@@ -1,0 +1,132 @@
+/* responsive.css — breakpoint overrides for the hi-fi desktop layout.
+   Uses !important to win over inline styles from the component roots. */
+
+/* ───────────────────────────────────────────────────────────────
+   TABLET  ≤ 1024px
+   ─────────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .hero, .sec { padding-left: 32px !important; padding-right: 32px !important; }
+  .hero { padding-top: 120px !important; padding-bottom: 72px !important; }
+  .sec  { padding-top: 88px  !important; padding-bottom: 100px !important; }
+
+  .topnav { padding: 22px 32px !important; }
+
+  .hero-a-grid { grid-template-columns: 1fr !important; gap: 56px !important; }
+  .hero-a-grid h1 { font-size: 72px !important; }
+  .hero-a-stage { height: 460px !important; max-width: 620px; }
+
+  .hero-b h1 { font-size: 96px !important; }
+
+  .hero-c h1 { font-size: 88px !important; }
+  .hero-c-dual { grid-template-columns: 1fr !important; gap: 24px !important; }
+
+  .promise h2 { font-size: 56px !important; margin-bottom: 56px !important; }
+  .promise-grid { grid-template-columns: 1fr !important; }
+
+  .how h2 { font-size: 56px !important; }
+  .how-grid { grid-template-columns: 1fr !important; gap: 56px !important; }
+
+  .showcase h2 { font-size: 56px !important; }
+  .showcase-grid { grid-template-columns: 1fr !important; }
+
+  .faq h2 { font-size: 56px !important; }
+  .faq-row { grid-template-columns: 64px 1fr !important; gap: 24px !important; align-items: start !important; }
+  .faq-row > *:nth-child(3) { grid-column: 2 !important; }
+
+  .compare h2 { font-size: 44px !important; }
+  .compare-table { overflow-x: auto !important; }
+  .compare-grid { min-width: 760px !important; }
+
+  .proof h2 { font-size: 44px !important; }
+  .proof-grid { grid-template-columns: 1fr !important; }
+
+  .final-cta { padding-top: 110px !important; padding-bottom: 110px !important; }
+  .final-cta h2 { font-size: 88px !important; }
+
+  .site-footer { padding: 48px 32px 28px !important; }
+  .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 36px !important; }
+}
+
+/* ───────────────────────────────────────────────────────────────
+   MOBILE  ≤ 720px
+   ─────────────────────────────────────────────────────────────── */
+@media (max-width: 720px) {
+  .hero, .sec { padding-left: 22px !important; padding-right: 22px !important; }
+  .hero { padding-top: 96px !important; padding-bottom: 56px !important; }
+  .sec  { padding-top: 72px !important; padding-bottom: 80px !important; }
+
+  .topnav { padding: 18px 22px !important; }
+  .topnav > div:last-child > span { font-size: 10px !important; }
+
+  .hero-a-grid { gap: 40px !important; }
+  .hero-a-grid h1 { font-size: 52px !important; margin: 24px 0 20px !important; }
+  .hero-a-grid p { font-size: 16px !important; margin-bottom: 28px !important; }
+  .hero-a-stage { height: 320px !important; max-width: 100%; }
+  .hero-a-stage > div:first-child { transform: none !important; inset: 0 !important; }
+  .hero-a-stage > div:last-child {
+    width: 200px !important; height: 180px !important;
+    bottom: -24px !important; left: -12px !important;
+  }
+
+  .hero-b { min-height: 640px !important; padding-bottom: 56px !important; }
+  .hero-b h1 { font-size: 60px !important; }
+  .hero-b p  { font-size: 17px !important; }
+
+  .hero-c h1 { font-size: 56px !important; }
+  .hero-c p  { font-size: 16px !important; }
+  .hero-c-dual > div { transform: none !important; }
+  .hero-c-dual [style*="height: 420px"] { height: 260px !important; }
+
+  .hero button, .final-cta button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  .hero > div > div > div:last-child,
+  .final-cta > div > div:last-child {
+    flex-direction: column !important;
+    width: 100%;
+  }
+
+  .promise h2, .how h2, .showcase h2, .faq h2 { font-size: 40px !important; margin-bottom: 40px !important; }
+  .compare h2, .proof h2 { font-size: 32px !important; }
+
+  .promise-grid > div { padding: 28px 22px 32px !important; }
+  .promise-grid h3 { font-size: 28px !important; }
+
+  .how-grid { gap: 44px !important; }
+  .how-grid h3 { font-size: 22px !important; }
+
+  .showcase-grid a > div { padding: 22px 20px 0 !important; }
+  .showcase-grid a > div > div:first-child > div:first-child { font-size: 22px !important; }
+  .showcase-grid [style*="height: 320px"] { height: 220px !important; }
+
+  .faq-row { grid-template-columns: 1fr !important; gap: 12px !important; padding: 24px 0 28px !important; align-items: start !important; }
+  .faq-row h3 { font-size: 22px !important; }
+  .faq-row p  { font-size: 14px !important; }
+
+  .compare-grid { min-width: 680px !important; font-size: 12px !important; }
+
+  .proof-grid > div { padding: 24px 22px !important; }
+  .proof-grid p { font-size: 18px !important; }
+
+  .final-cta { padding-top: 80px !important; padding-bottom: 80px !important; }
+  .final-cta h2 { font-size: 56px !important; }
+  .final-cta p  { font-size: 16px !important; }
+
+  .site-footer { padding: 40px 22px 24px !important; }
+  .footer-grid { grid-template-columns: 1fr !important; gap: 28px !important; padding-bottom: 32px !important; }
+  .site-footer > div > div:last-child {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────
+   SMALL MOBILE  ≤ 380px
+   ─────────────────────────────────────────────────────────────── */
+@media (max-width: 380px) {
+  .hero-a-grid h1 { font-size: 44px !important; }
+  .hero-b h1 { font-size: 48px !important; }
+  .hero-c h1 { font-size: 44px !important; }
+  .final-cta h2 { font-size: 44px !important; }
+}
