@@ -19,6 +19,13 @@ logs
 .idea
 .vscode
 
+# Claude Code local config (machine-specific permissions, not for sharing)
+.claude/
+
+# Any file explicitly marked "local"
+*.local
+*.local.*
+
 # Local env files
 .env
 .env.*
