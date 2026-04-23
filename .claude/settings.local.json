@@ -3,7 +3,17 @@
     "allow": [
       "Bash(npm --version)",
       "Bash(npm install *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(gh run *)",
+      "Bash(brew list *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git pull *)",
+      "Bash(git rm *)",
+      "Bash(grep -o 'html,body{[^}]*}\\\\|body{[^}]*}\\\\|html{[^}]*}' /Users/n9ti/Dev/exh1b1t.github.io/.output/public/index.html)",
+      "Bash(grep -o 'box-sizing[^;}]*\\\\|\\\\*,\\\\*[^{]*{[^}]*}' /Users/n9ti/Dev/exh1b1t.github.io/.output/public/index.html)",
+      "Bash(grep -oE '\\(html|body\\)[, }][^{}]*\\\\{[^}]*\\\\}' /Users/n9ti/Dev/exh1b1t.github.io/.output/public/index.html)"
     ]
   }
 }
