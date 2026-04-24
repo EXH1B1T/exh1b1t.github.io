@@ -10,6 +10,9 @@ const props = withDefaults(defineProps<{
   lime: '#d4f541'
 })
 
+const { defaults } = useSite()
+const preLaunch = defaults.preLaunch
+
 const isMac = computed(() => props.os === 'mac')
 const bg = computed(() =>
   props.primary ? (props.variant === 'lime' ? props.lime : '#f4f2ed') : 'transparent'
@@ -25,27 +28,56 @@ const onEnter = (e: MouseEvent) => {
 const onLeave = (e: MouseEvent) => {
   ;(e.currentTarget as HTMLElement).style.transform = 'translateY(0)'
 }
+
+const btnStyle = computed(() => ({
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: '10px',
+  height: '52px',
+  padding: '0 24px',
+  background: bg.value,
+  color: fg.value,
+  border: border.value,
+  borderRadius: '6px',
+  fontFamily: `'Inter', sans-serif`,
+  fontSize: '14px',
+  fontWeight: 500,
+  letterSpacing: '-0.005em',
+  cursor: 'pointer',
+  textDecoration: 'none',
+  transition: 'transform .15s, box-shadow .15s'
+}))
 </script>
 
 <template>
+  <!-- Pre-launch: only the primary CTA renders, linking to mailto/waitlist. -->
+  <a
+    v-if="preLaunch && props.primary"
+    :href="defaults.notifyUrl"
+    :style="btnStyle"
+    @mouseenter="onEnter"
+    @mouseleave="onLeave"
+  >
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+      <polyline points="22,6 12,13 2,6"/>
+    </svg>
+    <span>Get notified at launch</span>
+    <span :style="{
+      fontSize: '11px',
+      opacity: 0.5,
+      fontVariantNumeric: 'tabular-nums',
+      marginLeft: '4px'
+    }">Mac + Windows</span>
+  </a>
+
+  <!-- Pre-launch secondary buttons: hidden -->
+  <template v-else-if="preLaunch && !props.primary" />
+
+  <!-- Launched: original Download button -->
   <button
-    :style="{
-      display: 'inline-flex',
-      alignItems: 'center',
-      gap: '10px',
-      height: '52px',
-      padding: '0 24px',
-      background: bg,
-      color: fg,
-      border,
-      borderRadius: '6px',
-      fontFamily: `'Inter', sans-serif`,
-      fontSize: '14px',
-      fontWeight: 500,
-      letterSpacing: '-0.005em',
-      cursor: 'pointer',
-      transition: 'transform .15s, box-shadow .15s'
-    }"
+    v-else
+    :style="btnStyle"
     @mouseenter="onEnter"
     @mouseleave="onLeave"
   >

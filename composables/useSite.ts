@@ -15,7 +15,16 @@ export const SITE_DEFAULTS = {
   headlineKey: 'ownership' as HeadlineKey,
   primaryOs: 'mac' as 'mac' | 'windows',
   limeMode: 'restrained' as 'whisper' | 'restrained' | 'confident',
-  limeHex: '#d4f541'
+  limeHex: '#d4f541',
+
+  // Flip to `false` when the desktop app is ready to ship — the site will
+  // switch back to Download buttons + "v1.0 · free forever" badges.
+  preLaunch: true,
+  // Where "Get notified" points while preLaunch is true.
+  // Swap for a Formspree/Tally/etc. URL if you want an in-page form.
+  notifyUrl: 'mailto:hello@exh1b1t.app?subject=Notify%20me%20at%20launch',
+  // Shown in the top-right nav badge during pre-launch.
+  preLaunchBadge: 'Coming soon · join the waitlist'
 }
 
 export const PHOTOS = {

@@ -2,6 +2,11 @@
 defineProps<{
   lime: string
 }>()
+
+const { defaults } = useSite()
+const versionLine = defaults.preLaunch
+  ? 'Pre-launch · shipping soon'
+  : 'v1.0.0 · shipped Apr 2026'
 </script>
 
 <template>
@@ -50,7 +55,7 @@ defineProps<{
             background: lime,
             boxShadow: `0 0 6px ${lime}`
           }" />
-          <span>v1.0.0 · shipped Apr 2026</span>
+          <span>{{ versionLine }}</span>
         </div>
       </div>
     </div>
