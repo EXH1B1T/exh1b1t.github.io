@@ -20,7 +20,7 @@ const badgeText = preLaunch ? defaults.preLaunchBadge : 'v1.0 · free forever'
     color: '#e8e8e8'
   }">
     <Logo :size="14" />
-    <a v-if="preLaunch" :href="defaults.notifyUrl" :style="{
+    <a v-if="preLaunch" :href="defaults.notifyUrl" target="_blank" rel="noopener" :style="{
       display: 'flex',
       alignItems: 'center',
       gap: '6px',

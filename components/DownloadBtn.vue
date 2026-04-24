@@ -50,25 +50,27 @@ const btnStyle = computed(() => ({
 </script>
 
 <template>
-  <!-- Pre-launch: only the primary CTA renders, linking to mailto/waitlist. -->
+  <!-- Pre-launch: single CTA pointing to GitHub so visitors can Watch/Star
+       to self-subscribe. No inbox for us to manage. -->
   <a
     v-if="preLaunch && props.primary"
     :href="defaults.notifyUrl"
+    target="_blank"
+    rel="noopener"
     :style="btnStyle"
     @mouseenter="onEnter"
     @mouseleave="onLeave"
   >
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-      <polyline points="22,6 12,13 2,6"/>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/>
     </svg>
-    <span>Get notified at launch</span>
+    <span>Follow on GitHub</span>
     <span :style="{
       fontSize: '11px',
       opacity: 0.5,
       fontVariantNumeric: 'tabular-nums',
       marginLeft: '4px'
-    }">Mac + Windows</span>
+    }">coming soon</span>
   </a>
 
   <!-- Pre-launch secondary buttons: hidden -->

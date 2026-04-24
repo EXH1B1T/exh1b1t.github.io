@@ -20,11 +20,12 @@ export const SITE_DEFAULTS = {
   // Flip to `false` when the desktop app is ready to ship — the site will
   // switch back to Download buttons + "v1.0 · free forever" badges.
   preLaunch: true,
-  // Where "Get notified" points while preLaunch is true.
-  // Swap for a Formspree/Tally/etc. URL if you want an in-page form.
-  notifyUrl: 'mailto:hello@exh1b1t.app?subject=Notify%20me%20at%20launch',
+  // Where the pre-launch CTA sends people. Defaults to the GitHub org so
+  // visitors can Follow / Watch and self-subscribe to the first release —
+  // no inbox to manage on our side.
+  notifyUrl: 'https://github.com/EXH1B1T',
   // Shown in the top-right nav badge during pre-launch.
-  preLaunchBadge: 'Coming soon · join the waitlist'
+  preLaunchBadge: 'Coming soon · follow on GitHub'
 }
 
 export const PHOTOS = {
