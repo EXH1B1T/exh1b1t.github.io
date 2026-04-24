@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0f0f0f"/>
+
+  <!-- Top eyebrow with lime-accented 1s -->
+  <g transform="translate(80, 96)">
+    <circle cx="0" cy="-5" r="5" fill="#d4f541"/>
+    <text x="16" y="0" font-family="'JetBrains Mono', 'SF Mono', 'Menlo', 'Monaco', monospace" font-size="15" font-weight="700" letter-spacing="2.4" fill="#f4f2ed" dominant-baseline="middle">EXH<tspan fill="#d4f541">1</tspan>B<tspan fill="#d4f541">1</tspan>T &#8212; FREE FOR PHOTOGRAPHERS</text>
+  </g>
+
+  <!-- URL top-right -->
+  <text x="1120" y="91" font-family="'JetBrains Mono', 'SF Mono', 'Menlo', 'Monaco', monospace" font-size="14" fill="rgba(232,232,232,0.5)" letter-spacing="0.6" text-anchor="end">exh1b1t.github.io</text>
+
+  <!-- Main editorial headline -->
+  <g transform="translate(80, 260)">
+    <text font-family="'Cormorant Garamond', 'EB Garamond', 'Palatino', 'Hoefler Text', Georgia, serif" font-size="96" font-weight="400" fill="#f4f2ed" letter-spacing="-2">
+      <tspan x="0" dy="0">A portfolio site</tspan>
+      <tspan x="0" dy="100">you actually <tspan font-style="italic">own.</tspan></tspan>
+    </text>
+  </g>
+
+  <!-- Lime tick -->
+  <rect x="80" y="520" width="48" height="3" fill="#d4f541"/>
+
+  <!-- Supporting line -->
+  <text x="80" y="568" font-family="'Inter', system-ui, -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" fill="rgba(232,232,232,0.6)" letter-spacing="-0.2">Drag, drop, publish. No code. No subscription. No catch.</text>
+</svg>

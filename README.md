@@ -31,10 +31,24 @@ npm run preview   # preview the static build locally
 | Testimonials                            | `components/SocialProof.vue`            |
 | Footer copy                             | `components/SiteFooter.vue`             |
 | Global / responsive CSS                 | `assets/css/`                           |
+| Social share / OG meta tags             | `nuxt.config.ts` (`app.head.meta`)      |
+| Social share cover image                | `scripts/gen-og.mjs` → `npm run gen:og` |
+
+## Social share cover image
+
+The 1200×630 `public/og.png` is generated from a plain SVG in
+[`scripts/gen-og.mjs`](scripts/gen-og.mjs). To refresh after a copy change:
+
+```bash
+npm run gen:og
+```
+
+The raw SVG is saved next to it at `public/og.svg` for easier future edits.
+Meta tags (`og:*`, `twitter:*`) live in `nuxt.config.ts`.
 
 ## Deployment
 
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which:
+Pushing to `main` triggers `.github/workflows/nuxtjs.yml`, which:
 
 1. installs dependencies
 2. runs `nuxt generate` (static export)
