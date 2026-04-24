@@ -7,7 +7,7 @@ const props = defineProps<{
 const qs = [
   {
     q: 'Wait. How is this actually free?',
-    a: 'Your site runs on GitHub Pages, which is free for personal sites. The app runs on your computer. We don\'t host anything, so there\'s nothing for us to charge you for — and nothing that can break if our servers go down, because there are no servers.'
+    a: 'Your site runs on GitHub Pages, which is free for personal sites. The app runs on your computer. We don\'t host anything, so there\'s nothing for us to charge you for — and nothing that can break if our servers go down, because there are no servers. Fair-use limits apply (GitHub\'s, not ours) — if a viral moment pushes you past them, your repo is portable to any static host with zero rewrite.'
   },
   {
     q: 'Do I need a GitHub account?',
@@ -18,8 +18,8 @@ const qs = [
     a: 'Yes. Point your domain at GitHub Pages and the app walks you through the DNS setup step by step. HTTPS is on by default.'
   },
   {
-    q: 'What happens if EXH1B1T shuts down?',
-    a: 'Nothing. Your site keeps running on GitHub — your photos, captions, and theme are all in a repo you own. You can keep editing the repo by hand, or pick any static-site tool you like. We are not a dependency of your site.'
+    q: 'What happens if EXH1B1T shuts down? Or if GitHub asks me to move?',
+    a: 'The answer is the same either way: nothing breaks. Your photos, captions, and theme all live in a repo you own — we\'re not a dependency, and neither is any specific host. Keep editing the repo by hand, pick any static-site tool you like, or point Cloudflare Pages / Netlify / your own server at the same repo. No rebuild, no re-upload.'
   },
   {
     q: 'How long does publishing actually take?',
